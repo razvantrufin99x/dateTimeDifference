@@ -35,7 +35,9 @@ namespace dateTimeDifference
             dt2 = DateTime.Now;
             textBox2.Text = dt2.ToString();
             TimeSpan tmp = dt2 - dt1;
-            button1.Text = (tmp.Days/365).ToString() + "  Years";
+            float y = (tmp.Days / 365);
+            label4.Text = y.ToString() + "  Years";
+            label4.Text += (y*365-tmp.Days).ToString() + "  Days";
             textBox3.Text = tmp.ToString();
         }
     }
